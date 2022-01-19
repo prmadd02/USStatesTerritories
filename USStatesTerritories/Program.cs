@@ -100,7 +100,7 @@ namespace USStatesTerritories
             double average = uSCensusData.Average(x => double.Parse(x.census20));
             double sum = uSCensusData.Sum(x => Math.Pow(double.Parse(x.census20) - average, 2));
 
-            result = Math.Sqrt((sum) / (count));
+            result = Math.Sqrt(sum / count);
 
             string Summary = $"Mean: {average}, Median: {median}Standard Deviation: {result}";
 
